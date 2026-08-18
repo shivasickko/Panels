@@ -1,89 +1,87 @@
-# Panels Studio Pro 🎨✨
+# Panels Studio Pro
 
-> **Professional Client-Side Color Extraction & Design System Studio**
-
-Panels is a privacy-first, high-performance web application for extracting, analyzing, previewing, and exporting color palettes directly from digital images using client-side HTML5 Canvas processing.
+A high-performance, privacy-first client-side web application for extracting, analyzing, previewing, and exporting color palettes directly from digital images using HTML5 Canvas processing.
 
 ---
 
-## 🌟 Key Features
+## Core Capabilities
 
-- ⚡ **100% Client-Side Processing**: Zero server uploads. Images remain completely private in local browser memory.
-- 🎨 **4 Advanced Extraction Algorithms**:
-  - **Grid Spatial Sampling**: Fast, even sampling across a 2D spatial image grid.
-  - **K-Means++ Clustering**: Iterative vector quantization for true dominant color discovery.
-  - **Median Cut Color Quantization**: Color box splitting based on maximum RGB variance.
-  - **Vibrant / Sample Mode**: Selective extraction based on saturation and visual contrast.
-- 👁️ **Interactive Eyedropper & Custom Palette Mode**: Pick pixel-precise colors directly from uploaded images to build custom palettes.
-- 📊 **Dual Preview Layouts**:
-  - **Vertical Color Bars**: Poster-style view with relative-luminance contrast text and rotated `#` HEX labels.
-  - **Upright Data Rows**: Detailed breakdown with HEX, RGB, HSL, and shade generation controls.
-- 🧪 **Live UI Mockup Studio**: Test extracted color palettes on a live interactive app user interface in real-time.
-- ♿ **WCAG 2.1 Contrast Matrix**: Real-time relative luminance $L$ calculator and AA/AAA compliance indicator.
-- 📦 **Multi-Format Export Studio**:
-  - Pure Palette PNG / JPEG (clean vertical color bars).
-  - Graphic Poster PNG (includes image thumbnail, metadata watermark, and swatches).
-  - CSS `:root` variables, Tailwind CSS extension config, JSON dataset, and plain text HEX list.
+- **Client-Side Pixel Processing**: All computations execute locally in browser memory using the HTML5 Canvas API. Zero network requests or external server image uploads ensure complete data privacy.
+- **Color Quantization Algorithms**:
+  - **Grid Spatial Sampling**: Fast 2D matrix sampling across spatial image coordinates.
+  - **K-Means++ Vector Quantization**: Iterative cluster centroid optimization for precise dominant color discovery.
+  - **Median Cut Quantization**: Recursive RGB box partitioning along maximum color variance axes.
+  - **Vibrant / Sample Extraction**: Selective color extraction prioritizing saturation and visual distinction.
+- **Custom Palette & Eyedropper Workflow**: Interactive canvas eyedropper allowing pixel-precise manual color selection to curate custom color schemes.
+- **Dual Display Modes**:
+  - **Vertical Color Bars**: Poster-style visualization featuring relative luminance contrast calculations and rotated HEX labels.
+  - **Upright Data Rows**: Expanded detail view providing HEX, RGB, HSL values, and 50–900 shade generation.
+- **Interactive UI Mockup Studio**: Real-time component preview environment for testing extracted color palettes across application user interfaces.
+- **WCAG 2.1 Accessibility Matrix**: Real-time relative luminance calculation and automated AA/AAA contrast compliance verification.
+- **Multi-Format Export Engine**:
+  - High-resolution palette PNG / JPEG image exports.
+  - Graphic poster PNG output featuring image thumbnail, color swatches, and metadata watermark.
+  - Code exports including native CSS `:root` variables, Tailwind CSS extension configurations, structured JSON datasets, and plain-text HEX arrays.
 
 ---
 
-## 🚀 Getting Started
+## Technical Stack
+
+- **Frontend Framework**: React 18
+- **Language**: TypeScript 5
+- **Build Tooling**: Vite 5
+- **Styling**: Tailwind CSS 4
+- **State Management**: Zustand 5 (with cached `ImageData` buffers)
+- **Icons**: Lucide React
+
+---
+
+## Project Structure & Technical Documentation
+
+Comprehensive architectural specifications and algorithm documentation are maintained in the [`docs/`](./docs) directory:
+
+- [`docs/INDEX.md`](./docs/INDEX.md): Master Knowledge Graph Index
+- [`docs/TECHNICAL_ALGORITHMS_AND_WORKFLOW.md`](./docs/TECHNICAL_ALGORITHMS_AND_WORKFLOW.md): Mathematical foundations and quantization algorithms
+- [`docs/TECH_STACK_AND_ARCHITECTURE.md`](./docs/TECH_STACK_AND_ARCHITECTURE.md): Software architecture and state management specifications
+- [`docs/UI_COMPONENT_LIBRARY.md`](./docs/UI_COMPONENT_LIBRARY.md): Component layout and design system tokens
+- [`docs/DATA_FLOW.md`](./docs/DATA_FLOW.md): Event loops and reactive state lifecycle
+- [`docs/DESIGN.md`](./docs/DESIGN.md): Design tokens and aesthetic guidelines
+- [`docs/DEVELOPMENT_HISTORY.md`](./docs/DEVELOPMENT_HISTORY.md): Changelog and release milestones
+
+---
+
+## Setup and Installation
 
 ### Prerequisites
 
-- **Node.js**: `v18.0.0` or higher
-- **npm** or **yarn** / **pnpm**
+- Node.js (v18.0.0 or higher)
+- npm, yarn, or pnpm
 
-### Installation
+### Execution Commands
 
-1. **Clone the Repository**:
+1. Clone the repository:
    ```bash
    git clone https://github.com/shivasickko/Panels.git
    cd Panels
    ```
 
-2. **Install Dependencies**:
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-3. **Start Development Server**:
+3. Launch local development server:
    ```bash
    npm run dev
    ```
 
-4. **Build for Production**:
+4. Create production build:
    ```bash
    npm run build
    ```
 
 ---
 
-## 📚 Technical Documentation & Knowledge Base
-
-Comprehensive architectural specifications and algorithm write-ups are available in the [`/docs`](./docs) directory:
-
-- 📖 [`docs/INDEX.md`](./docs/INDEX.md) — Master Index & Knowledge Graph Overview
-- ⚙️ [`docs/TECHNICAL_ALGORITHMS_AND_WORKFLOW.md`](./docs/TECHNICAL_ALGORITHMS_AND_WORKFLOW.md) — Color quantization math & formulas
-- 🏗️ [`docs/TECH_STACK_AND_ARCHITECTURE.md`](./docs/TECH_STACK_AND_ARCHITECTURE.md) — Frameworks & state management design
-- 🎨 [`docs/UI_COMPONENT_LIBRARY.md`](./docs/UI_COMPONENT_LIBRARY.md) — Component architecture & UI primitives
-- 🔄 [`docs/DATA_FLOW.md`](./docs/DATA_FLOW.md) — Reactive data loops & export pipelines
-- 🎨 [`docs/DESIGN.md`](./docs/DESIGN.md) — Design tokens & aesthetic philosophy
-- 📜 [`docs/DEVELOPMENT_HISTORY.md`](./docs/DEVELOPMENT_HISTORY.md) — Milestones & changelog
-
----
-
-## 🛠️ Built With
-
-- **React 18** — Component UI framework
-- **TypeScript 5** — Type safety & developer experience
-- **Vite 5** — Blazing fast build tool & dev server
-- **Tailwind CSS 4** — Modern utility-first styling
-- **Zustand 5** — Ultra-fast state management with cached `ImageData`
-- **Lucide React** — Crisp vector icons
-
----
-
-## 📄 License
+## License
 
 MIT License © 2026 Panels
